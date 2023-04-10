@@ -25,7 +25,7 @@ nav img{
 
 /* start home */
 .home{
-    background-image: url("img/header.jpg");
+    background-image: url("../img/header.jpg");
     height: calc(100vh - 100px);
     width: 100%;
     text-align: center;
