@@ -1,0 +1,252 @@
+/* golbal rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* end global rules */
+/* start nav  */
+nav{
+    background-color: rgb(239, 239, 239);
+    height: 70px;
+}
+nav img{
+    height: 50px;
+}
+@media (max-width:992px) {
+    nav .navbar-nav{
+        background-color:rgb(239, 239, 239);
+    }
+}
+/* end nav  */
+
+/* start home */
+.home{
+    background-image: url(/img/header.jpg);
+    height: calc(100vh - 100px);
+    width: 100%;
+    text-align: center;
+}
+.home .btn{
+    border-color: black;
+    transition: 0.8s;
+    margin-top: 40px;
+    border-radius: 0%;
+}
+.home .btn:hover{
+    background-color: black;
+    color: white;
+}
+.home .center{
+    padding-top: 15%;
+}
+.home h3{
+    /* font-size: 22px; */
+    font-weight: 400;
+}
+.home h1{
+    /* font-size: 40px; */
+    font-weight: 400;
+}
+.home p{
+    width: 10%;
+    border-bottom:solid 2px black;
+    margin-left: 45%;
+    padding: 0 0 10px;
+}
+/* end home */
+/* start header */
+.header{
+    background-color:black;
+    color: white;
+    text-align: center;
+}
+.header h1{
+    font-weight: 300;
+}
+.header .btn{
+    background-color: white;
+    border-radius: 0%;
+    transition: 0.8s;
+    margin-top: 10px;
+}
+.header .btn:hover{
+    background-color:black;
+    border: solid 1px white;
+}
+.header .row{
+    padding: 50px;
+}
+/* end header */
+/* start BEGINNING */
+.beginning p{
+    color: grey;
+}
+.beginning hr{
+    width: 10%;
+}
+.beginning h6,
+.beginning h1{
+    font-weight: 300;
+}
+.beginning h1{
+    padding-top: 100px;
+}
+.beginning .btn{
+    background-color: black;
+    color: white;
+    border-radius: 0%;
+    transition: 0.8s;
+    margin: 20px auto;
+}
+.beginning img{
+    width: 100%;
+}
+.beginning .btn:hover{
+    background-color:white;
+    border: solid 1px black;
+    color: black;
+}
+/* end BEGINNING */
+/* start vd  */
+.video {
+	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/keyboard.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+/* end vd  */
+/* start portfolio */
+.portfolio{
+    text-align: center;
+    padding: 100px 0px;
+}
+.portfolio img{
+    width: 90%;
+    padding: 10px;
+}
+.portfolio .imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 3fr));
+    gap: 30px;
+}
+.portfolio #btn1{
+    background-color:black;
+    color: white;
+}
+.portfolio #btn{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+.portfolio #btn li{
+    width: 120px;
+    padding: 10px;
+}
+.portfolio #btn button{
+    width: 100%;
+}
+.portfolio .title2{
+    border-bottom: solid 1px black;
+    width: 20%;
+    margin-left: 40%;
+}
+.portfolio p{
+    color:grey;
+}
+.portfolio .btn{
+    border: solid 1px black;
+    border-radius: 0px;
+    padding: 20px;
+    transition: 0.8s;
+}
+.portfolio ul{
+    list-style: none;
+}
+/* end portfolio */
+
+/* start coffe  */
+.coffe{
+	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/coffe.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 351.75px;
+}
+.coffe .container .p{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: 47%;
+}
+
+/* end coffe  */
+/* start ABOUT */
+hr{
+    margin-left: 45%;
+    width: 10%;
+}
+.about .card{
+    border-style: none;
+}
+.about .card figcaption{
+    height: 100px;
+    background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+    transform: -100%;
+    color: white;
+}
+.about .texts p{
+    color: grey;
+}
+/* end ABOUT */
+/* start SUBSCRIBE */
+.header input{
+    background-color:black;
+    border:white 1px solid;
+    height: 60px;
+    margin-top: 18px;
+}
+.header .subscribeBtn{
+    height: 60px;
+}
+/* end SUBSCRIBE */
+/* start contact */
+.contact p{
+    color: grey;
+}
+.btnInput{
+    border:solid 1px grey;
+    background-color:white;
+    color: black;
+    transition: 0.8s;
+    margin-top: -30px;
+}
+.btnInput:hover{
+    background-color:black;
+    border-color: black;
+    color: white;
+}
+/* end contact */
+/* start footer  */
+.footer{
+    background-color:black;
+}
+.footer .social a{
+    transition: 0.8s;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    color: white;
+}
+.footer .social a:hover{
+    background-color:white;
+    color: black;
+}
+/* end footer  */
