@@ -1,25 +1,19 @@
-const images = [
-    { id: 'img1', src: 'img/portfolio/img1.jpg' },
-    { id: 'img2', src: 'img/portfolio/img2.jpg' },
-    { id: 'img3', src: 'img/portfolio/img3.jpg' },
-    { id: 'img4', src: 'img/portfolio/img4.jpg' },
-    { id: 'img5', src: 'img/portfolio/img5.jpg' },
-    { id: 'img6', src: 'img/portfolio/img6.jpg' }
-];
-
 const buttons = [
-    { id: 'btn1', images: images.map(img => img.src), activeIndex: 0 },
-    { id: 'btn2', images: ['img/portfolio/img4.jpg'], activeIndex: 1 },
-    { id: 'btn3', images: ['img/portfolio/img5.jpg', 'img/portfolio/img6.jpg'], activeIndex: 2 },
-    { id: 'btn4', images: ['img/portfolio/img3.jpg'], activeIndex: 3 },
-    { id: 'btn5', images: ['img/portfolio/img1.jpg', 'img/portfolio/img2.jpg'], activeIndex: 4 },
+    { id: 'btn1'},
+    { id: 'btn2'},
+    { id: 'btn3'},
+    { id: 'btn4'},
+    { id: 'btn5'},
 ];
 
-function updateImages(imgIds) {
-    images.forEach((img, i) => {
-        document.getElementById(img.id).src = imgIds[i];
-    });
-}
+const images = [
+    { src: 'img/portfolio/img1.jpg', alt: '' },
+    { src: 'img/portfolio/img2.jpg', alt: '' },
+    { src: 'img/portfolio/img3.jpg', alt: '' },
+    { src: 'img/portfolio/img4.jpg', alt: '' },
+    { src: 'img/portfolio/img5.jpg', alt: '' },
+    { src: 'img/portfolio/img6.jpg', alt: '' }
+];
 
 function updateButtons(activeBtnIndex = 0) {
     buttons.forEach((btn, i) => {
@@ -35,7 +29,27 @@ function updateButtons(activeBtnIndex = 0) {
 }
 
 function clickButton(buttonIndex) {
+    const imgsID = document.getElementById('imgs');
     const button = buttons[buttonIndex];
-    updateImages(button.images);
-    updateButtons(button.activeIndex);
-}
+    updateButtons(buttonIndex);
+    let html = '';
+    
+    if (buttonIndex === 0) {
+        images.forEach(image => {
+        html += `<img src="${image.src}" alt="${image.alt}" />`;
+        });
+    } else if (buttonIndex === 1) {
+        html += `<img src="${images[3].src}" alt="${images[3].alt}" />`;
+    } else if (buttonIndex === 2) {
+        html += `<img src="${images[4].src}" alt="${images[4].alt}" />
+                <img src="${images[5].src}" alt="${images[5].alt}" />`;
+    } else if (buttonIndex === 3) {
+        html += `<img src="${images[2].src}" alt="${images[2].alt}" />`;
+    } else if (buttonIndex === 4) {
+        html += `<img src="${images[0].src}" alt="${images[0].alt}" />
+                <img src="${images[1].src}" alt="${images[1].alt}" />`;
+    }
+    
+    imgsID.innerHTML = html;
+    }
+    
